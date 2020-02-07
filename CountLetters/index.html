@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" integrity="sha256-ECB9bbROLGm8wOoEbHcHRxlHgzGqYpDtNTgDTyDz0wg=" crossorigin="anonymous" />
+  <title>Count Letters</title>
+</head>
+<body>
+  <div class="container" style="text-align: center;">
+    <h1>Count how many letters</h1>
+    <input type="text" onblur="alert(cal(this.value)+' letters')">
+    <input type="button" value="Count Letters"></input type="button">
+  </div>
+  <script>
+    function cal(str){
+      str = str.replace(' ', '');
+      console.log(str);
+      re = /[a-z & A-Z]/g;
+      if(re.test(str)) {
+        return str.match(re).length;
+      } else {
+        return 0;
+      }
+    }
+  </script>
+</body>
+</html>
