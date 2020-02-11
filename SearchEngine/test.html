@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body><br><br>
+  <form Name="myForm">
+  <div align="center"><center><p>
+  <script language="JavaScript">
+  var formVariable;
+  function makeSearch()
+  {
+   console.log(formVariable);
+  
+  document.forms[formVariable + document.myForm.SearchSelect.selectedIndex].elements[0].value=document.myForm.SeachText.value;
+  // document.forms[formVariable+document.myForm.SearchSelect.selectedIndex].submit();
+  console.log(document.forms[formVariable+document.myForm.SearchSelect.selectedIndex]);
+  
+  }
+  
+  </script>
+</p>
+    <p><span style="font-size: 12pt">Keyword:</span>
+        <input name="SeachText" type="text" size="21"
+style=" margin-left: 1px">
+    </p>
+    <p><br>
+        <span style="font-size: 12pt">Select Enginee:</span>
+        <select Name="SearchSelect" size="1" >
+          <option selected>Yahoo</option>
+          <option value="Google">Google</option>
+          <option value="Bing">Bing</option>
+        </select>
+      </p>
+    <p><br>
+<input type="button" value=" SEARCH "
+onClick="makeSearch()">
+        <script language="JavaScript">
+formVariable=document.forms.length
+        </script>
+    </p>
+</center></div>
+</form>
+<form action="http://search.yahoo.com/bin/search"
+method="get">
+<input type="hidden" name="p" value>
+</form>
+<form action="http://www.google.com/search">
+<input type="hidden" name="q" value>
+</form>
+<form action="http://www.bing.com/search">
+<input type="hidden" name="q" value>
+</form>
+</body>
+</html>”
+ 
+  
+</body>
+</html>

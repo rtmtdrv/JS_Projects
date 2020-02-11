@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" integrity="sha256-ECB9bbROLGm8wOoEbHcHRxlHgzGqYpDtNTgDTyDz0wg=" crossorigin="anonymous" />
+  <title>Search Engine</title>
+</head>
+<body>
+  <div class="container" style="text-align: center;">
+    <form name="myForm" id="myForm">
+      <br>
+      <div>
+        <p style="font-size: 18px;">Keyword: 
+          <input type="text" name="SearchText" size="21" style="margin-left: 10px;" id="searchBox">
+        </p>
+        <p style="font-size: 18px;">Select Engine:
+          <select name="SearchSelect" size="1" id="engineName">
+            <option selected>Yahoo</option>
+            <option value="Google">Google</option>
+            <option value="Bing">Bing</option>
+          </select>
+        </p>
+        <input type="button" value="SEARCH" onClick="makeSearch()">
+      </div>
+    </form>
+    <form action="http://search.yahoo.com/bin/search" method="get">
+      <input type="hidden" name="p" value>
+    </form>
+    <form action="http://www.google.com/search" value>
+      <input type="hidden" name="q">
+    </form>
+    <form action="http://www.bing.com/search" value>
+      <input type="hidden" name="q">
+    </form>
+  </div>
+  <script>
+    function makeSearch(){
+      // let formValue = document.getElementById("myForm").value;
+      let searchValue = document.getElementById("searchBox").value
+      let searchEngine = document.getElementById("engineName").selectedIndex;
+
+      // searchEngine = document.forms[1 + searchEngine].value;
+      // console.log(document.forms[1 + searchEngine]);
+      // console.log(formValue);
+      console.log(document.myForm.searchText.value);
+      console.log(searchValue);
+      
+      
+      
+      // document.forms[1 + searchEngine].submit();
+    }  
+  </script>
+</body>
+</html>
