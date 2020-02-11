@@ -12,44 +12,28 @@
       <br>
       <div>
         <p style="font-size: 18px;">Keyword: 
-          <input type="text" name="SearchText" size="21" style="margin-left: 10px;" id="searchBox">
+          <input type="text" name="searchText" size="21" style="margin-left: 10px;" id="searchBox">
         </p>
         <p style="font-size: 18px;">Select Engine:
-          <select name="SearchSelect" size="1" id="engineName">
+          <select name="searchSelect" size="1" id="engineName">
             <option selected>Yahoo</option>
             <option value="Google">Google</option>
             <option value="Bing">Bing</option>
           </select>
         </p>
-        <input type="button" value="SEARCH" onClick="makeSearch()">
+        <input type="button" value=" SEARCH " onClick="makeSearch()">
       </div>
     </form>
-    <form action="http://search.yahoo.com/bin/search" method="get">
+    <form action="http://search.yahoo.com/bin/search" method="get" target="_blank">
       <input type="hidden" name="p" value>
     </form>
-    <form action="http://www.google.com/search" value>
+    <form action="http://www.google.com/search" target="_blank" value>
       <input type="hidden" name="q">
     </form>
-    <form action="http://www.bing.com/search" value>
+    <form action="http://www.bing.com/search" target="_blank"value>
       <input type="hidden" name="q">
     </form>
   </div>
-  <script>
-    function makeSearch(){
-      // let formValue = document.getElementById("myForm").value;
-      let searchValue = document.getElementById("searchBox").value
-      let searchEngine = document.getElementById("engineName").selectedIndex;
-
-      // searchEngine = document.forms[1 + searchEngine].value;
-      // console.log(document.forms[1 + searchEngine]);
-      // console.log(formValue);
-      console.log(document.myForm.searchText.value);
-      console.log(searchValue);
-      
-      
-      
-      // document.forms[1 + searchEngine].submit();
-    }  
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>

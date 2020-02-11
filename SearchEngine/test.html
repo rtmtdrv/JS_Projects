@@ -15,8 +15,11 @@
    console.log(formVariable);
   
   document.forms[formVariable + document.myForm.SearchSelect.selectedIndex].elements[0].value=document.myForm.SeachText.value;
-  // document.forms[formVariable+document.myForm.SearchSelect.selectedIndex].submit();
-  console.log(document.forms[formVariable+document.myForm.SearchSelect.selectedIndex]);
+  console.log(document.forms[formVariable + document.myForm.SearchSelect.selectedIndex].elements[0].value);
+  console.log(document.forms[formVariable + document.myForm.SearchSelect.selectedIndex]); 
+  console.log(formVariable + document.myForm.SearchSelect.selectedIndex);
+  // document.forms[formVariable + document.myForm.SearchSelect.selectedIndex].submit();
+  // console.log(document.forms[formVariable+document.myForm.SearchSelect.selectedIndex]);
   
   }
   
