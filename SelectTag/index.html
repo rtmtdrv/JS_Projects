@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Tag</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onclick="alterTab()" onload="init()">
+  <div class="container">
+    <br><br>
+    <table align="center" cellpadding='0' cellspacing='0' bgcolor="#ebc475" style="width: 400px; height: 300px;">
+      <tr>
+        <td id="t1" class="selTab" style="height: 25px;">SELECT 1</td>
+        <td id="t2" class="tab">SELECT 2</td>
+        <td id="t3" class="tab">SELECT 3</td>
+        <td id="t4" class="tab">SELECT 4</td>
+        <td id="t5" class="tab">SELECT 5</td>
+      </tr>
+      <tr class="bottom">
+        <td id="t1base" style="height: 1px;"></td>
+        <td id="t2base" style="background-color: white; height: 1px"></td>
+        <td id="t3base" style="background-color: white; height: 1px"></td>
+        <td id="t4base" style="background-color: white; height: 1px"></td>
+        <td id="t5base" style="background-color: white; height: 1px"></td>
+      </tr>
+      <tr>
+        <td height="*" colspan="5" id="tabTexts" style="border-left:solid thin white; border-bottom: solid thin white; border-right: solid thin white">
+        &nbsp;</td>
+      </tr>
+    </table>
+    <div class="conts" id="t1Texts">
+      <p align="center">1. AAAAAAAAAA</p>
+    </div>
+    <div class="conts" id="t2Texts">
+      <p align="center">2. BBBBBBBBBB</p>
+    </div>
+    <div class="conts" id="t3Texts">
+      <p align="center">3. CCCCCCCCCC</p>
+    </div>
+    <div class="conts" id="t4Texts">
+      <p align="center">4. DDDDDDDDDD</p>
+    </div>
+    <div class="conts" id="t5Texts">
+      <p align="center">5. EEEEEEEEE</p>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
